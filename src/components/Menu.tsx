@@ -1,0 +1,27 @@
+import styles from "@/css/menu.module.css"
+import { Breed } from "@/types"
+import BreedCard from "@/components/BreedCard";
+
+export default function Menu({listOfBreeds, maxIndex, setSelectedBreed}: {
+    listOfBreeds: Breed[],
+    maxIndex: number,
+    setSelectedBreed: (selectedBreed:Breed) => void
+}) {
+    return (
+        <section className={styles.filmFrames}>
+            {
+            listOfBreeds.map((breed, index) => {
+                if (index < maxIndex) {
+                return (
+                    <BreedCard
+                    key={breed.id}
+                    breed={breed}
+                    setSelectedBreed={setSelectedBreed}
+                    />
+                )
+                }
+            })
+            }
+        </section>
+    )
+}

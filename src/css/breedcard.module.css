@@ -1,0 +1,18 @@
+.breedcard {
+    cursor: pointer;
+    filter: brightness(0.3);
+    width: 12em;
+    height: 9em;
+}
+
+.breedcard:hover,
+.breedcard:focus {
+    filter: brightness(1);
+}
+
+.breedcontainer {
+    position: relative;
+    width: 9em;
+    height: 9em;
+    transform: translateX(25px);
+}

@@ -1,0 +1,10 @@
+.mainContent {
+    grid-column: 1/ 2;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    padding: 2em 3em;
+    opacity: 0.75;
+}
