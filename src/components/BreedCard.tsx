@@ -26,9 +26,6 @@ export default function BreedCard({breed, setSelectedBreed}: {
                 className={styles.breedcard}
                 onClick={(e)=>handleSelection(e)}
             >
-                <div
-                    className={styles.breedcontainer}
-                >
                 {
                     catImage
                     ? <>
@@ -42,7 +39,6 @@ export default function BreedCard({breed, setSelectedBreed}: {
                     </>
                     : <></>
                 }
-                </div>
             </div>
         </>
     )

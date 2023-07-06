@@ -1,22 +1,19 @@
 import { Breed } from "@/types";
+import Image from "next/image";
 import styles from "@/css/page.module.css";
-import { useEffect, useState } from "react";
-import { fetchCatImage } from "@/api";
 
-export default function BreedAlbum({selectedBreed}: {selectedBreed: Breed}) {
-    const [catBg, setCatBg] = useState<string>("");
+export default function BreedAlbum({selectedBreed, catBg, sizes}: {selectedBreed: Breed, catBg: string, sizes: string}) {
 
-    useEffect(() => {
-        fetchCatImage(selectedBreed?.reference_image_id)
-            .then((pic) => setCatBg(pic.url));
-    }, [selectedBreed])
-  
-
-    return (
-        <img
-            src={catBg}
-            alt={selectedBreed.name}
-            className={styles.background}
-        />
-    )
+    if (catBg) {
+        return (
+            <Image
+                src={catBg}
+                fill={true}
+                sizes={sizes}
+                style={{objectFit: "cover"}}
+                alt={selectedBreed.name}
+                className={styles.background}
+            />
+        )
+    }
 }

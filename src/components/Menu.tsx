@@ -9,19 +9,23 @@ export default function Menu({listOfBreeds, maxIndex, setSelectedBreed}: {
 }) {
     return (
         <section className={styles.filmFrames}>
-            {
-            listOfBreeds.map((breed, index) => {
-                if (index < maxIndex) {
-                return (
-                    <BreedCard
-                    key={breed.id}
-                    breed={breed}
-                    setSelectedBreed={setSelectedBreed}
-                    />
-                )
+            <div className={styles.filmContainer}>
+                <div className={styles.filmWrapper}>
+                {
+                listOfBreeds.map((breed, index) => {
+                    if (index < maxIndex) {
+                    return (
+                        <BreedCard
+                        key={breed.id}
+                        breed={breed}
+                        setSelectedBreed={setSelectedBreed}
+                        />
+                    )
+                    }
+                })
                 }
-            })
-            }
+                </div>
+            </div>
         </section>
     )
 }
