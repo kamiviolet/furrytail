@@ -1,7 +1,3 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] })
-
 export const metadata = {
   title: "FurryTail",
   description: "Simple application by Next & TypeScript all about furry beasts",
@@ -14,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
