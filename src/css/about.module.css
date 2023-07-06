@@ -1,0 +1,17 @@
+.about {
+    height: max-content;
+    min-height: 400px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    padding: 2em 3em;
+    opacity: 0.75;
+}
+
+.about_credit::after {
+    content: " (" attr(data-source) ")";
+    display: inline-block;
+    margin-inline-start: .5em;
+}

@@ -1,0 +1,28 @@
+.header {
+    padding: 1em 2em;
+    min-height: 75px;
+    height: fit-content;
+    box-shadow: 0 2px 2px darkslategrey;
+}
+
+.title {
+    letter-spacing: .15em;
+    font-variant: small-caps;
+    font-kerning: normal;
+}
+
+.title::after {
+    content: "  " attr(data-description);
+    display: inline-block;
+    font-variant: initial;
+    font-size: .5em;
+    font-weight: 200;
+    letter-spacing: .015em;
+    transform: translateY(-.25em);
+}
+
+@media (width > 1000px) {
+    .title::after {
+        margin-inline: .5em;
+    }
+}
